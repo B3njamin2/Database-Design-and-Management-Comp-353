@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:ital,wght@0,400;0,700;0,900;1,700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="Style/general.css">
+	<link rel="stylesheet" href="Style/navbar.css">
+	<link rel="stylesheet" href="Style/style.css">
+	<script src="script.js"></script>
+	<title>Contacts</title>
+</head>
+
+<body>
+	<nav class="navbar">
+		<a class="navbar-link top" href="adminIndex.html">
+			<img src="Img/side-Icons/home.png" alt="Home-logo">
+			<div>Home</div>
+		</a>
+		<a class="navbar-link" href="adminResume.html">
+			<img src="Img/side-Icons/Resume.png" alt="Resume-logo">
+			<div>Resume</div>
+		</a>
+		<a class="navbar-link" id="current">
+			<img src="Img/side-Icons/project.png" alt="Projects-logo">
+			<div>Projects</div>
+		</a>
+		<a class="navbar-link" href="adminContact.html">
+			<img src="Img/side-Icons/contact.png" alt="Contacts-logo">
+			<div>Contacts</div>
+		</a>
+		<a class="navbar-link" href="adminSocial.html">
+			<img src="Img/side-Icons/Social.png" alt="Social-logo">
+			<div>Social</div>
+		</a>
+		<a class="navbar-link bottom" href="logout.html">
+			<img src="Img/side-Icons/admin.png" alt="Admin-logo">
+			<div>Logout</div>
+		</a>
+	</nav>
+
+	<header class="title-container">
+		<div class="title">Projects</div>
+		<hr>
+	</header>
+
+	<main>
+		<div class="container">
+			<div class="inner-container">
+				<div class="subtitle">
+					Fill Information Here
+				</div>
+				
+				<label for="my-projects">My Projects:</label>
+				<textarea id='my-projects' rows="6"></textarea>
+			</div>
+			<label for="submit" style="display:none;">Submit:</label>
+			<input id="submit" class="thebutton" type="button" value="Submit" onclick="submitProjects()">
+		</div>
+
+	</main>
+
+	<div class="bottom-line"></div>
+</body>
+
+</html>
