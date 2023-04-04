@@ -110,12 +110,14 @@ textarea:focus {
 table, th, td {
   border: 1px solid;
   padding: 15px;
+  border-collapse:collapse;
 }
 
 td {
   text-align: center;
   vertical-align: middle;
 }
+
 summary {
   margin-top: 20px;
 }
