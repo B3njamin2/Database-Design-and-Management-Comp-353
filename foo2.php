@@ -95,19 +95,14 @@ if (isset($_POST['clear_session'])) {
 // Print the query output
 if (isset($_SESSION['query_output'])) {
     echo "<h2>Query History</h2>";
+    echo '<div id="query_history">';
     echo implode("", $_SESSION['query_output']);
+    echo '</div>';
 } else {
     echo "<p>No queries have been executed yet.</p>";
 }
 ?>
 
-<script>
-// JavaScript code to insert the query output into the div
-const queryResultsDiv = document.getElementById('query-results');
-queryResultsDiv.innerHTML = '<?php echo addslashes(isset($_SESSION['query_output']) ? implode("", $_SESSION['query_output']) : "<p>No queries have been executed yet.</p>"); ?>';
-</script>
-
-<div id="query-results"></div>
 
 <h2>Enter a Custom Query</h2>
 <form method="post">
@@ -127,3 +122,4 @@ queryResultsDiv.innerHTML = '<?php echo addslashes(isset($_SESSION['query_output
     <input type="submit" name="clear_session" value="Clear Session">
 </form>
 
+<div id="query_history"></div>
