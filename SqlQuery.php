@@ -6,8 +6,20 @@ $password = 'K1cKAl35';
 $dbname = 'zac353_4';
 
 // Start or resume the session
-if( empty(session_id()) && !headers_sent()){
-    session_start();
+// if( empty(session_id()) && !headers_sent()){
+//     session_start();
+// }
+
+$expiry = 60 * 60 * 24 * 1; // 3 days
+
+if (!isset($_SESSION['created'])) {
+    // Session variable 'created' doesn't exist, let's create one for the session
+    $_SESSION['created'] = time();
+} else if (time() - $_SESSION['created'] > $expiry) {
+    // More than 3days has passed since the timestamp in 'created' session variable. Destroy the session.
+    // Here you could also unset any other session variables you had. I am unsetting the 'created' variable.
+    unset($_SESSION['created']);
+    session_destroy();
 }
 
 // Check if a custom query has been submitted
