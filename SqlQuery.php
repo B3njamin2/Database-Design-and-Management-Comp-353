@@ -90,11 +90,9 @@ if (isset($_POST['query'])) {
 // Check if the "Clear Session" button has been pressed
 
 if (isset($_POST['clear_session'])) {
-    if( !(empty(session_id()) && !headers_sent())){
-        // Clear the session data
-        session_unset();
-        session_destroy();
-    } 
+    // Clear the session data
+    session_unset();
+    session_destroy();
 }
 ?>
 

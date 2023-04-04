@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -60,7 +61,7 @@
 				<form method="post">
     				<input type="submit" name="clear_session" value="Clear Session">
 				</form>
-				
+
 				<?php
 						// Print the query output
 						if (isset($_SESSION['query_output'])) {
