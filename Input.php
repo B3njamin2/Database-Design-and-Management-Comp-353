@@ -57,6 +57,10 @@
 					<input type="submit" name="submit" value="Submit" class="thebutton">
 				</form>
 				
+				<form method="post">
+    				<input type="submit" name="clear_session" value="Clear Session">
+				</form>
+				
 				<?php
 						// Print the query output
 						if (isset($_SESSION['query_output'])) {
