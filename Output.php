@@ -37,7 +37,7 @@
 
 	<main>
 		<div class="container2">
-			<div class="inner-container">
+			<div class="inner-container2">
 				<div id="content">
 					<?php
 					// Print the query output
