@@ -18,6 +18,15 @@ main {
   font-family: Montserrat, Roboto, Arial, sans-serif;
 }
 
+.container2 {
+  background-color: rgb(37, 37, 37);
+  border-radius: 25px;
+  margin-top: -20px;
+  margin-bottom: -140px;
+  padding-block: 40px;
+  font-family: Montserrat, Roboto, Arial, sans-serif;
+}
+
 .inner-container {
   width: 70%;
   margin-left: 50px;

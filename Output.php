@@ -36,7 +36,7 @@
 	</header>
 
 	<main>
-		
+		<div class="container2">
 			<div class="inner-container">
 				<div id="content">
 					<?php
@@ -53,7 +53,7 @@
 					<input type="submit" name="clear_session" value="Clear Session" class="thebutton clear_session">
 				</form>
 			</div>
-		
+		</div>
 	</main>
 
 	<div class="bottom-line"></div>
