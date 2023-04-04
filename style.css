@@ -23,10 +23,6 @@ main {
   margin-left: 50px;
 }
 
-#displayText {
-  line-height: 30px;
-  margin-top: 50px;
-}
 
 .subtitle {
   font-size: 25px;
@@ -91,4 +87,8 @@ textarea:focus {
 .thebutton:active {
   background-color: rgb(158, 157, 157);
   color: white;
+}
+
+.clear_session {
+  margin-top: 20px;
 }
