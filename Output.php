@@ -18,7 +18,7 @@
 
 <body>
 	<nav class="navbar">
-		<a class="navbar-link top" href="Input.html">
+		<a class="navbar-link top" href="Input.php">
 			<img src="home.png" alt="Home-logo" >
 			<div>Input</div>
 		</a>
