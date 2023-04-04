@@ -1,0 +1,94 @@
+main {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  width: 80%;
+  max-width: 900px;
+  height: 100%;
+  border-radius: 25px;
+  margin-top: -20px;
+  margin-bottom: -140px;
+  padding-block: 40px;
+  background-color: rgb(37, 37, 37);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: Montserrat, Roboto, Arial, sans-serif;
+}
+
+.inner-container {
+  width: 70%;
+  margin-left: 50px;
+}
+
+#displayText {
+  line-height: 30px;
+  margin-top: 50px;
+}
+
+.subtitle {
+  font-size: 25px;
+  font-weight: bold;
+  padding-bottom: 40px;
+}
+
+input {
+  width: 80%;
+  border-radius: 20px;
+  height: 40px;
+  color: rgb(63, 63, 63);
+	font-family: Montserrat, Roboto, Arial, sans-serif;
+}
+
+.inner-container input {
+  font-size: 20px;
+  padding-top: 2;
+  
+  margin-bottom: 20px;
+}
+
+.inner-container input:focus {
+  outline: none;
+}
+
+textarea {
+  border-radius: 20px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 3%;
+  line-height: 1.5;
+  font-size: 18px;
+  font-family: Roboto, Arial, sans-serif;
+  color: rgb(52, 52, 52);
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.thebutton {
+  font-weight: bold;
+  width: 25%;
+  border: 0;
+  cursor: pointer;
+  transition: color 0.15 background-color 0.15s;
+  height: 45px;
+  font-size: 18px;
+  background-color: rgb(42, 101, 165);
+  color: white;
+  text-align: center;
+	padding-left: -10px;
+}
+
+.thebutton:hover {
+  background-color: rgb(31, 84, 140);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.thebutton:active {
+  background-color: rgb(158, 157, 157);
+  color: white;
+}

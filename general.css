@@ -1,0 +1,40 @@
+body {
+  margin: 0px;
+  color: white;
+  font-family: Montserrat, Roboto, Arial, sans-serif;
+  background-color: rgb(0, 0, 0);
+  padding: 50px 20% 300px 20%;
+  position: relative;
+}
+main {
+  font-family: Arial;
+}
+
+.title-container {
+  margin-bottom: 70px;
+}
+
+.title {
+  font-size: 50px;
+  font-family:Montserrat, Roboto, Arial, sans-serif;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.title-container hr {
+  width: 30%;
+  height: 4px;
+  background-color: white;
+  margin-left: 0;
+  border: 0;
+  border-radius: 2px;
+}
+.bottom-line {
+  position: absolute;
+  height: 5px;
+  background-color: grey;
+  bottom: 50px;
+  right: 20%;
+  left: 20%;
+  border-radius: 2px;
+}
