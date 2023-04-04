@@ -6,7 +6,7 @@ $password = 'K1cKAl35';
 $dbname = 'zac353_4';
 
 // Start or resume the session
-if( empty(session_id()) && !headers_sent()){
+if (empty(session_id()) && !headers_sent()) {
     session_start();
 }
 
@@ -95,4 +95,3 @@ if (isset($_POST['clear_session'])) {
     session_destroy();
 }
 ?>
-
