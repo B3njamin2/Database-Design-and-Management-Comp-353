@@ -50,7 +50,7 @@
 					?>
 				</div>
 				<form method="post">
-					<input type="submit" name="clear_session" value="Clear Session" class="thebutton">
+					<input type="submit" name="clear_session" value="Clear Session" class="thebutton clear_session">
 				</form>
 			</div>
 		</div>
