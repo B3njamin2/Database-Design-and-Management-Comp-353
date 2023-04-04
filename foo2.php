@@ -91,16 +91,6 @@ if (isset($_POST['clear_session'])) {
     session_unset();
     session_destroy();
 }
-
-// Print the query output
-if (isset($_SESSION['query_output'])) {
-    echo "<h2>Query History</h2>";
-    echo '<div id="query_history">';
-    echo implode("", $_SESSION['query_output']);
-    echo '</div>';
-} else {
-    echo "<p>No queries have been executed yet.</p>";
-}
 ?>
 
 
@@ -122,4 +112,14 @@ if (isset($_SESSION['query_output'])) {
     <input type="submit" name="clear_session" value="Clear Session">
 </form>
 
-<div id="query_history"></div>
+<div id="content">
+    <?php
+        // Print the query output
+        if (isset($_SESSION['query_output'])) {
+            echo "<h2>Query History</h2>";
+            echo implode("", $_SESSION['query_output']);
+        } else {
+            echo "<p>No queries have been executed yet.</p>";
+        }
+        ?>
+    </div>
