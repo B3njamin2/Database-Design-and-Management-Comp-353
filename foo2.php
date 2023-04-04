@@ -101,7 +101,13 @@ if (isset($_SESSION['query_output'])) {
 }
 ?>
 
+<script>
+// JavaScript code to insert the query output into the div
+const queryResultsDiv = document.getElementById('query-results');
+queryResultsDiv.innerHTML = '<?php echo addslashes(isset($_SESSION['query_output']) ? implode("", $_SESSION['query_output']) : "<p>No queries have been executed yet.</p>"); ?>';
+</script>
 
+<div id="query-results"></div>
 
 <h2>Enter a Custom Query</h2>
 <form method="post">
@@ -121,6 +127,3 @@ if (isset($_SESSION['query_output'])) {
     <input type="submit" name="clear_session" value="Clear Session">
 </form>
 
-<div id="myOutputDiv">
-    <?php echo $output; ?>
-</div>
