@@ -57,6 +57,15 @@
 					<input type="submit" name="submit" value="Submit" class="thebutton">
 				</form>
 				
+				<?php
+						// Print the query output
+						if (isset($_SESSION['query_output'])) {
+							echo "<h2>Query History</h2>";
+							echo implode("", $_SESSION['query_output']);
+						} else {
+							echo "<p>No queries have been executed yet.</p>";
+						}
+						?>
 			</div>
 			
 	</main>
