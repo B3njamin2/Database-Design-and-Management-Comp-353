@@ -101,6 +101,8 @@ if (isset($_SESSION['query_output'])) {
 }
 ?>
 
+
+
 <h2>Enter a Custom Query</h2>
 <form method="post">
     <label for="query">Query:</label>
@@ -118,3 +120,7 @@ if (isset($_SESSION['query_output'])) {
 <form method="post">
     <input type="submit" name="clear_session" value="Clear Session">
 </form>
+
+<div id="myOutputDiv">
+    <?php echo $output; ?>
+</div>
