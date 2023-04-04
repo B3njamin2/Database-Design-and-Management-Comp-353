@@ -6,7 +6,9 @@ $password = 'K1cKAl35';
 $dbname = 'zac353_4';
 
 // Start or resume the session
-session_start();
+if( empty(session_id()) && !headers_sent()){
+    session_start();
+}
 
 // Check if a custom query has been submitted
 if (isset($_POST['query'])) {
