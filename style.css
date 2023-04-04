@@ -92,3 +92,10 @@ textarea:focus {
 .clear_session {
   margin-top: 30px;
 }
+
+table, th, td {
+  border: 1px solid;
+}
+summary {
+  margin-top: 20px;
+}
