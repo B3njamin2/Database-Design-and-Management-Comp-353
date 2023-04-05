@@ -81,6 +81,7 @@ textarea:focus {
 
 .thebutton {
   font-weight: bold;
+  min-width: 70px;
   width: 25%;
   border: 0;
   cursor: pointer;
