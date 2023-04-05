@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   clearButton1.addEventListener("click", async function () {
     if (clearEnabled) {
-      await delay(2000);
+      await delay(1000);
       textarea1.value = "";
       localStorage.removeItem("savedText1");
     }
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   clearButton2.addEventListener("click", async function () {
     if (clearEnabled) {
-      await delay(2000);
+      await delay(1000);
       textarea2.value = "";
       localStorage.removeItem("savedText2");
     }
