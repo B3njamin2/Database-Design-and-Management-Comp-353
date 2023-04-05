@@ -48,7 +48,7 @@
 				<form method="post">
 					<label for="query"></label>
 					<textarea id="query" name="query" rows="6"></textarea>
-					<input type="submit" value="Submit" class="thebutton">
+					<input type="submit" value="Submit" class="thebutton" id="clearButton1">
 				</form>
 
 
@@ -56,8 +56,11 @@
 				<form method="post">
 					<label for="query_input"></label>
 					<textarea id="query_input" name="query" rows="6"></textarea>
-					<input type="submit" name="submit" value="Submit" class="thebutton">
+					<input type="submit" name="submit" value="Submit" class="thebutton" id="clearButton2">
 				</form>
+
+				Toggle clear after sumbit:
+				<button id="toggleButton" class="thebutton">Off</button>
 			</div>
 
 	</main>
