@@ -1,26 +1,4 @@
-<?php session_start(); 
-		echo "<script>
-		// Get the textarea elements
-		var textarea1 = document.getElementById("query");
-		var textarea2 = document.getElementById("query_input");
-		
-		// Load the saved values from local storage, if any
-		if (localStorage.getItem("savedText1")) {
-		textarea1.value = localStorage.getItem("savedText1");
-		}
-		if (localStorage.getItem("savedText2")) {
-		textarea2.value = localStorage.getItem("savedText2");
-		}
-		
-		// Save the values to local storage whenever they change
-		textarea1.addEventListener("input", function() {
-		localStorage.setItem("savedText1", textarea1.value);
-		});
-		textarea2.addEventListener("input", function() {
-		localStorage.setItem("savedText2", textarea2.value);
-		});
-		</script>"
-?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,6 +14,7 @@
 	<link rel="stylesheet" href="navbar.css">
 	<link rel="stylesheet" href="style.css">
 	<?php include 'SqlQuery.php'; ?>
+	<script src="session.js"></script>
 	<title>Input</title>
 </head>
 
