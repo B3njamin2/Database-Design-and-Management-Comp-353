@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var clearButton1 = document.getElementById("clearButton1");
   var clearButton2 = document.getElementById("clearButton2");
 
-  var toggleButton = document.getElementById("toggleButton");
+  var toggleButton = document.getElementById("toggle-Button");
 });
 
 var clearEnabled = false;
