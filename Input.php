@@ -60,7 +60,7 @@
 				</form>
 
 				Toggle clear after sumbit:
-				<input type="submit" id="toggle-Button" class="thebutton">Off</input>
+				<button id="toggle-Button" class="thebutton">Off</button>
 			</div>
 
 	</main>
