@@ -60,9 +60,6 @@
 					<textarea id="query_input" name="query" rows="6"></textarea>
 					<input type="submit" name="submit" value="Submit" class="thebutton" id="clearButton2">
 				</form>
-
-				Toggle clear after sumbit:
-				<button id="toggle-Button" class="thebutton">Off</button>
 			</div>
 
 	</main>
