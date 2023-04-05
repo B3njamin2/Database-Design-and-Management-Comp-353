@@ -11,8 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     textarea2.value = localStorage.getItem("savedText2");
   }
 
-  var clearButton1 = document.getElementById("clearButton1");
-  var clearButton2 = document.getElementById("clearButton2");
+
 
   var toggleButton = document.getElementById("toggle-Button");
 
@@ -23,10 +22,10 @@ document.addEventListener("DOMContentLoaded", function () {
     clearEnabled = !clearEnabled; // Toggle the flag
     if (clearEnabled) {
       toggleButton.textContent = "On"; // Change the text content of the button
-      clearButton.disabled = false; // Enable the clear button
+      toggleButton.disabled = false; // Enable the clear button
     } else {
       toggleButton.textContent = "Off"; // Change the text content of the button
-      clearButton.disabled = true; // Disable the clear button
+      toggleButton.disabled = true; // Disable the clear button
     }
   });
 
@@ -39,14 +38,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   clearButton1.addEventListener("click", function () {
-    if (clearEnabled1) {
+    if (clearEnabled) {
       textarea1.value = "";
       localStorage.removeItem("savedText1");
     }
   });
 
   clearButton2.addEventListener("click", function () {
-    if (clearEnabled1) {
+    if (clearEnabled) {
       textarea2.value = "";
       localStorage.removeItem("savedText2");
     }
