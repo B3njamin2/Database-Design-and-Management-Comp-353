@@ -11,15 +11,17 @@ document.addEventListener("DOMContentLoaded", function () {
     textarea2.value = localStorage.getItem("savedText2");
   }
 
-
-
   var toggleButton = document.getElementById("toggle-Button");
 
   var clearEnabled = false;
 
+  function delay(time) {
+    return new Promise((resolve) => setTimeout(resolve, time));
+  }
   // Add click event listener to the toggle button
   toggleButton.addEventListener("click", function () {
     clearEnabled = !clearEnabled; // Toggle the flag
+    delay(1000);
     if (clearEnabled) {
       toggleButton.textContent = "On"; // Change the text content of the button
       toggleButton.disabled = false; // Enable the clear button
