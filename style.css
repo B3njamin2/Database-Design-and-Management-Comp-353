@@ -123,15 +123,13 @@ summary {
   margin-top: 20px;
 }
 
-#toggle-button {
+#toggleButton {
   background-color: #ccc;
   color: #000;
-  
-  cursor: pointer;
 }
 
 /* CSS code for the toggle button in the "enabled" state */
-#toggle-button.enabled {
+#toggleButton.enabled {
   background-color: #00c;
   color: #fff;
 }

@@ -20,16 +20,16 @@ document.addEventListener("DOMContentLoaded", function () {
 var clearEnabled = false;
 
 // Add click event listener to the toggle button
-toggleButton.addEventListener("click", function() {
-    clearEnabled = !clearEnabled; // Toggle the flag
-    if (clearEnabled) {
-      toggleButton.textContent = "On"; // Change the text content of the button
-      clearButton.disabled = false; // Enable the clear button
-    } else {
-      toggleButton.textContent = "Off"; // Change the text content of the button
-      clearButton.disabled = true; // Disable the clear button
-    }
-  });
+toggleButton.addEventListener("click", function () {
+  clearEnabled = !clearEnabled; // Toggle the flag
+  if (clearEnabled) {
+    toggleButton.textContent = "On"; // Change the text content of the button
+    clearButton.disabled = false; // Enable the clear button
+  } else {
+    toggleButton.textContent = "Off"; // Change the text content of the button
+    clearButton.disabled = true; // Disable the clear button
+  }
+});
 
 // Save the values to local storage whenever they change
 textarea1.addEventListener("input", function () {
@@ -40,16 +40,15 @@ textarea2.addEventListener("input", function () {
 });
 
 clearButton1.addEventListener("click", function () {
-    if (clearEnabled1) {
-        textarea1.value = "";
-        localStorage.removeItem("savedText1");
-    }
+  if (clearEnabled1) {
+    textarea1.value = "";
+    localStorage.removeItem("savedText1");
+  }
 });
 
 clearButton2.addEventListener("click", function () {
-    if (clearEnabled1) {
-        textarea2.value = "";
-        localStorage.removeItem("savedText2");
-    }
+  if (clearEnabled1) {
+    textarea2.value = "";
+    localStorage.removeItem("savedText2");
+  }
 });
-
