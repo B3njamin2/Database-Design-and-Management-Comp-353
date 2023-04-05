@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="navbar.css">
 	<link rel="stylesheet" href="style.css">
 	<?php include 'SqlQuery.php'; ?>
+	<script src="session.js"></script>
 	<title>Outputs</title>
 </head>
 
@@ -50,7 +51,7 @@
 					?>
 				</div>
 				<form method="post">
-					<input type="submit" name="clear_session" value="Clear Session" class="thebutton clear_session">
+					<input id="clearSession" type="submit" name="clear_session" value="Clear Session" class="thebutton clear_session">
 				</form>
 			</div>
 		</div>

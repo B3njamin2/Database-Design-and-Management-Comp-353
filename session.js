@@ -11,9 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
     textarea2.value = localStorage.getItem("savedText2");
   }
 
-  var clearButton1 = document.getElementById("clearButton1");
-  var clearButton2 = document.getElementById("clearButton2");
-
   // Save the values to local storage whenever they change
   textarea1.addEventListener("input", function () {
     localStorage.setItem("savedText1", textarea1.value);
@@ -21,5 +18,14 @@ document.addEventListener("DOMContentLoaded", function () {
   textarea2.addEventListener("input", function () {
     localStorage.setItem("savedText2", textarea2.value);
   });
+
+//   var clearButton = document.getElementById("clearSession");
+
+//   clearButton.addEventListener("click", async function () {
+//       textarea1.value = "";
+//       localStorage.removeItem("savedText1");
+//       textarea2.value = "";
+//       localStorage.removeItem("savedText2");
+//   });
 
 });
