@@ -15,16 +15,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var clearEnabled = false;
 
-  function delay(time) {
-    return new Promise((resolve) => setTimeout(resolve, time));
-  }
   // Add click event listener to the toggle button
   toggleButton.addEventListener("click", function () {
     clearEnabled = !clearEnabled; // Toggle the flag
-    delay(1000);
+    
     if (clearEnabled) {
       toggleButton.textContent = "On"; // Change the text content of the button
       toggleButton.disabled = false; // Enable the clear button
+
+      // Send an AJAX request to the PHP file
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", "SqlQuery.php", true);
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          // The PHP script has completed running
+          // Clear the textareas here
+          textarea1.value = "";
+          textarea2.value = "";
+          localStorage.removeItem("savedText1");
+          localStorage.removeItem("savedText2");
+        }
+      };
+      xhr.send("data=" + encodeURIComponent(textarea1.value + textarea2.value));
     } else {
       toggleButton.textContent = "Off"; // Change the text content of the button
       toggleButton.disabled = true; // Disable the clear button
@@ -37,19 +50,5 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   textarea2.addEventListener("input", function () {
     localStorage.setItem("savedText2", textarea2.value);
-  });
-
-  clearButton1.addEventListener("click", function () {
-    if (clearEnabled) {
-      textarea1.value = "";
-      localStorage.removeItem("savedText1");
-    }
-  });
-
-  clearButton2.addEventListener("click", function () {
-    if (clearEnabled) {
-      textarea2.value = "";
-      localStorage.removeItem("savedText2");
-    }
   });
 });
