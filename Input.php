@@ -14,7 +14,6 @@
 	<link rel="stylesheet" href="navbar.css">
 	<link rel="stylesheet" href="style.css">
 	<?php include 'SqlQuery.php'; ?>
-	<script src="session.js"></script>
 	<title>Input</title>
 </head>
 
