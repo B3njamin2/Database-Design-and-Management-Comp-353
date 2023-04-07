@@ -116,7 +116,7 @@ if (!$result5) {
 }
 
 $sql6 = "
-    delimiter //
+    delimiter ;
 ";
 
 $result6 = $conn->query($sql6);
