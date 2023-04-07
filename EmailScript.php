@@ -13,22 +13,21 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// query
-$sql1 = "INSERT INTO Schedule (facility_id, medi_care, start_time, end_time, date)
+//Query
+$sql1 = "INSERT INTO Email_Log (receiver, date, sender, body, subject)
 
 SELECT 
-    F.id AS facility_id, 
-    E.medi_care, 
-    TIME_FORMAT(SEC_TO_TIME(FLOOR(RAND() * 23200) + 20000), '%H:%i') AS start_time, 
-    TIME_FORMAT(SEC_TO_TIME(43200 +3200 + FLOOR(RAND() * 40000)), '%H:%i') AS end_time, 
-    DATE_ADD( CURRENT_DATE  , INTERVAL FLOOR(RAND() * 24) DAY) AS date
+  E.email_address,
+  CURRENT_DATE As Date,
+  facility_name,
+ LEFT(CONCAT('Dear Mr./Ms. ', fName,' ', lName, ', you are scheduled to work on ', S.date ,' between ', S.start_time, ' and ', end_time , ' at ' ,facility_name,' ', address , '. All other dates have entry: No Assignment ','. Please be reminded to follow all necessary COVID procedures before coming to work. Thank You, ', 'Email sent to: ', email_address ), 80) As body,
+  CONCAT(facility_name, ' Schedule for ', start_date, ' to undetermined') as subject
 FROM 
-    Facilities_1 AS F
-    CROSS JOIN Employees1 AS E
-WHERE (F.id, E.medi_care) IN (
-    SELECT w.facility_id, w.medi_care 
-    FROM WorkAt w 
-    WHERE w.end_date IS NULL);";
+  Schedule S
+  NATURAL JOIN (SELECT * FROM WorkAt WHERE end_date is NULL) W  
+  NATURAL JOIN (SELECT id as facility_id, name as facility_name, address from Facilities_1) F 
+  NATURAL JOIN (SELECT medi_care, fName, lName, email_address  FROM Employees1) E
+";
 $result = $conn->query($sql1);
 
 // Check for errors
@@ -40,4 +39,4 @@ if (!$result) {
 
 // Close connection
 $conn->close();
-?>
+?>`
