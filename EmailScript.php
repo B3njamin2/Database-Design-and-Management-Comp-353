@@ -29,7 +29,14 @@ WHERE (F.id, E.medi_care) IN (
     SELECT w.facility_id, w.medi_care 
     FROM WorkAt w 
     WHERE w.end_date IS NULL);";
-$conn->query($sql1);
+$result = $conn->query($sql1);
+
+// Check for errors
+if (!$result) {
+    echo "Error: " . mysqli_error($conn);
+} else {
+    echo "Affected rows: " . mysqli_affected_rows($conn);
+}
 
 // Close connection
 $conn->close();

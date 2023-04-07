@@ -28,7 +28,14 @@ FROM
   NATURAL JOIN (SELECT id as facility_id, name as facility_name, address from Facilities_1) F 
   NATURAL JOIN (SELECT medi_care, fName, lName, email_address  FROM Employees1) E
 ";
-$conn->query($sql1);
+$result = $conn->query($sql1);
+
+// Check for errors
+if (!$result) {
+    echo "Error: " . mysqli_error($conn);
+} else {
+    echo "Affected rows: " . mysqli_affected_rows($conn);
+}
 
 // Close connection
 $conn->close();
