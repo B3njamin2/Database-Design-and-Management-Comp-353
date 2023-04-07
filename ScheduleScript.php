@@ -22,9 +22,9 @@ $result1 = $conn->query($sql1);
 
 // Check for errors
 if (!$result1) {
-    echo "Error: " . mysqli_error($conn);
+    echo "Error: \n" . mysqli_error($conn);
 } else {
-    echo "Affected rows: " . mysqli_affected_rows($conn);
+    echo "Affected rows: \n\n" . mysqli_affected_rows($conn);
 }
 
 $sql2 = "
@@ -48,9 +48,9 @@ $result2 = $conn->query($sql2);
 
 // Check for errors
 if (!$result2) {
-    echo "Error: " . mysqli_error($conn);
+    echo "Error: \n" . mysqli_error($conn);
 } else {
-    echo "Affected rows: " . mysqli_affected_rows($conn);
+    echo "Affected rows: \n\n" . mysqli_affected_rows($conn);
 }
 
 $sql3 = "
@@ -75,23 +75,9 @@ $result3 = $conn->query($sql3);
 
 // Check for errors
 if (!$result3) {
-    echo "Error: " . mysqli_error($conn);
+    echo "Error: \n" . mysqli_error($conn);
 } else {
-    echo "Affected rows: " . mysqli_affected_rows($conn);
-}
-
-
-$sql4 = "
-    delimiter //
-";
-
-$result4 = $conn->query($sql4);
-
-// Check for errors
-if (!$result4) {
-    echo "Error: " . mysqli_error($conn);
-} else {
-    echo "Affected rows: " . mysqli_affected_rows($conn);
+    echo "Affected rows: \n\n" . mysqli_affected_rows($conn);
 }
 
 $sql5 = "
@@ -110,24 +96,8 @@ $result5 = $conn->query($sql5);
 
 // Check for errors
 if (!$result5) {
-    echo "Error: " . mysqli_error($conn);
+    echo "Error: \n" . mysqli_error($conn);
 } else {
-    echo "Affected rows: " . mysqli_affected_rows($conn);
+    echo "Affected rows: \n\n" . mysqli_affected_rows($conn);
 }
 
-$sql6 = "
-    delimiter ;
-";
-
-$result6 = $conn->query($sql6);
-
-// Check for errors
-if (!$result6) {
-    echo "Error: " . mysqli_error($conn);
-} else {
-    echo "Affected rows: " . mysqli_affected_rows($conn);
-}
-
-// Close connection
-$conn->close();
-?>
