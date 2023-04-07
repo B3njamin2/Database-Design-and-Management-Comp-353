@@ -89,7 +89,7 @@ IF((SELECT df FROM (SELECT  medi_care, MAX(date_infected) as df FROM Infections 
 THEN
 SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT='This employee can not be schedule for 2 weeks after their recent infection';
 end if;
-end; //
+end; 
 ";
 
 $result5 = $conn->query($sql5);
