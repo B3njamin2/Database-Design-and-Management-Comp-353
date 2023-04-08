@@ -1,11 +1,9 @@
 <?php
-// Replace with your MySQL database credentials
 $host = 'zac353.encs.concordia.ca';
 $username = 'zac353_4';
 $password = 'K1cKAl35';
 $dbname = 'zac353_4';
 
-// Start or resume the session
 if (empty(session_id()) && !headers_sent()) {
     session_start();
 }
@@ -32,7 +30,6 @@ if (isset($_POST['query'])) {
             // Get the number of columns in the result set
             $num_columns = mysqli_num_fields($result);
 
-            // Build the table
             $output .= "<table>";
             $output .= "<tr>";
             for ($i = 0; $i < $num_columns; $i++) {
