@@ -86,10 +86,8 @@ if (isset($_POST['query'])) {
     $connection->close();
 }
 
-// Check if the "Clear Session" button has been pressed
-
+// Clear session
 if (isset($_POST['clear_session'])) {
-    // Clear the session data
     session_unset();
     session_destroy();
 }
