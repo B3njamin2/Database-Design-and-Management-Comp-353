@@ -37,6 +37,5 @@ if (!$result) {
     echo "Affected rows: " . mysqli_affected_rows($conn);
 }
 
-// Close connection
 $conn->close();
 ?>`
